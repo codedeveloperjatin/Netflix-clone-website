@@ -1,32 +1,23 @@
 import React from 'react';
+import Images from './Images';
+import Heading from './Heading';
+import Link from './Link';
+import Span from './Span';
+
 
 const Cards = (props) => {
     return(
        <>
     <div className="cards">
-
-       <div className="card">
-       
-          <img src={props.imgsrc} alt="myPic" className="card_img" />
-       
-       <div className="card__info">
-       
-          <span className="card__category"> {props.title} </span>
-       
-          <h3 className="card__title" >{props.sname} </h3>
-       
-          <a href={props.link} target="_blank">
-       
-             <button>Watch Now</button>
-       
-          </a>
-       
-       </div>
-       
+      <div className="card">
+         <Images imgsrc={props.imgsrc}/>
+         <div className="card__info">
+            <Span title={props.title}/>
+            <Heading sname={props.sname} />
+            <Link link={props.link}/>
+         </div> 
       </div>
-    
     </div> 
-    
     </>
     )
  }
